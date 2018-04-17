@@ -15,9 +15,9 @@ class Song < ActiveRecord::Base
     self.artist = Artist.find_or_create_by(name: name)
   end
 
-  def artist_name
-    self.artist.name
-  end
+  # def artist_name
+  #   self.artist.name
+  # end
 
   def note_contents
     self.notes.map{|note| note.content}
