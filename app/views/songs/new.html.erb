@@ -15,10 +15,10 @@
   <br />
 
   <%= f.label :genre_name %>
-  <%= f.text_field :genre_name %>
-  <datalist id="artists_autocomplete">
-    <% Artist.all.each do |artist| %>
-      <option value="<%= artist.name %>">
+  <%= f.text_field :genre_name, list: "genres_autocomplete" %>
+  <datalist id="genres_autocomplete">
+    <% Genre.all.each do |genre| %>
+      <option value="<%= genre.name %>">
     <% end %>
   </datalist>
   <br />
