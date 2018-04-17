@@ -16,6 +16,11 @@
 
   <%= f.label :genre_name %>
   <%= f.text_field :genre_name %>
+  <datalist id="artists_autocomplete">
+    <% Artist.all.each do |artist| %>
+      <option value="<%= artist.name %>">
+    <% end %>
+  </datalist>
   <br />
 
   <%= f.submit %>
