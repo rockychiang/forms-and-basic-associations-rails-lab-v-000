@@ -6,8 +6,8 @@
   <br />
 
 
-  <%= f.label :genre_name %>
-  <%= f.collection_select :song_genre_id, Genre.all, :id, :name %>
+  <%= f.label :song_genre_id %>
+  <%= f.collection_select :genre, Genre.all, :id, :name %>
   <br />
 
   <%= f.submit %>
