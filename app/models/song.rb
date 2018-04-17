@@ -25,7 +25,7 @@ class Song < ActiveRecord::Base
 
   def note_contents=(notes)
     notes.each do |note|
-      self.notes.build(content: note)
+      self.notes.build(content: note) if !note.empty?
     end
   end
 end
